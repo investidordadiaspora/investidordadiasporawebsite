@@ -256,32 +256,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const OPPS = {
       'agronegocio': { 
         title: 'Agronegócio',
-        text: 'Potencial Agrícola — Cabo Verde possui um clima estável e temperaturas amenas ao longo do ano, permitindo produções agrícolas previsíveis e com menor risco climático. As ilhas de Santiago, S. Antão, Fogo, Brava e S. Nicolau são as ilhas com maior potencial agrícola.\n\nOportunidades de Mercado — Atualmente, cerca de 70% dos alimentos consumidos no país são importados, o que torna os produtos locais altamente competitivos e reduz a dependência externa. O mercado europeu de alimentos orgânicos está avaliado em mais de 50 bilhões de euros, apresentando uma oportunidade para exportação de produtos agrícolas sustentáveis.',
+        text: '<b>Potencial Agrícola</b>\n\nCabo Verde possui um clima estável e temperaturas amenas ao longo do ano, permitindo produções agrícolas previsíveis e com menor risco climático. As ilhas de Santiago, S. Antão, Fogo, Brava e S. Nicolau são as ilhas com maior potencial agrícola.\n\n\n<b>Oportunidades de Mercado</b>\n\nAtualmente, cerca de 70% dos alimentos consumidos no país são importados, o que torna os produtos locais altamente competitivos e reduz a dependência externa. O mercado europeu de alimentos orgânicos está avaliado em mais de 50 bilhões de euros, apresentando uma oportunidade para exportação de produtos agrícolas sustentáveis.',
         image: './images/agronegocio.jpg'
       },
       'industria': { 
-        title: 'Indústria',
-        text: 'Cabo Verde oferece excelentes oportunidades para o desenvolvimento industrial, com foco em setores como processamento de alimentos, têxteis, e produtos farmacêuticos. A localização estratégica do país facilita o acesso aos mercados europeu, africano e americano.\n\nO governo cabo-verdiano implementou políticas de incentivo fiscal e infraestruturas modernas para apoiar o crescimento industrial. As zonas económicas especiais oferecem condições vantajosas para investidores, incluindo isenções fiscais e procedimentos administrativos simplificados.',
-        image: './images/industria.jpg'
+        title: 'Indústria Criativa',
+        text: '<b>Música e Artes</b>\n\nO setor da cultura e das artes representa um dos pilares da identidade nacional, com potencial de crescimento tanto no mercado interno quanto na exportação de talentos.\n\n\n<b>Reconhecimento Global</b>\n\n\A música cabo-verdiana já é reconhecida globalmente, criando uma base sólida para expansão.\n\n\n<b>Oportunidades de Investimento</b>\n\nHá oportunidades para investimentos em eventos culturais, produção audiovisual e comercialização de produtos artesanais tradicionais.',
+        image: './images/industria-criativa.jpg'
       },
       'economia-digital': { 
         title: 'Economia Digital',
-        text: 'Cabo Verde está a emergir como um hub tecnológico na África Ocidental, com investimentos significativos em infraestruturas digitais e conectividade. O país oferece oportunidades únicas em desenvolvimento de software, serviços de TI, e-commerce e transformação digital.\n\nCom uma população jovem e tecnologicamente adaptável, Cabo Verde apresenta um ambiente ideal para startups e empresas de tecnologia. O governo apoia ativamente a inovação digital através de programas de incubação e parcerias internacionais.',
+        text: '<b>Infraestrutura</b>\n\nO acesso à internet de banda larga cobre mais de 90% do território nacional.\n\n\n<b>Tech Park</b>\n\n\Impulsionado pelo Tech Park e iniciativas governamentais.\n\n\n<b>Hub Tecnológico</b>\n\nObjetivo do Governo de tornar Cabo Verde um hub tecnológico na África Ocidental.\n\n\n<b>Startups</b>\n\nAmbiente favorável para startups de base digital e inovação tecnológica.',
         image: './images/economia-digital.jpg'
       },
       'turismo': { 
         title: 'Turismo',
-        text: 'O turismo é um dos pilares da economia cabo-verdiana, com um potencial de crescimento excepcional. O país oferece uma combinação única de praias paradisíacas, cultura rica e hospitalidade excecional.\n\nAs oportunidades incluem desenvolvimento hoteleiro, turismo de experiência, ecoturismo e turismo cultural. O governo implementou políticas para diversificar a oferta turística e atrair investimentos em infraestruturas turísticas de qualidade.',
+        text: 'O país apresenta oportunidades significativas em ecoturismo, turismo de aventura, turismo cultural e infraestrutura hoteleira. Há um grande potencial para o desenvolvimento de experiências autênticas e atividades de lazer que atendam ao público internacional, bem como a ampliação da oferta de alojamentos e serviços que atendam à crescente demanda.',
         image: './images/turismo.jpg'
       },
       'economia-verde': { 
         title: 'Economia Verde',
-        text: 'Cabo Verde está comprometido com o desenvolvimento sustentável e a transição para uma economia verde. O país oferece oportunidades únicas em energias renováveis, especialmente solar e eólica, aproveitando o clima favorável e a localização geográfica.\n\nOutras áreas de oportunidade incluem gestão de resíduos, agricultura sustentável, e ecoturismo. O governo implementou políticas ambiciosas para alcançar 100% de energia renovável até 2030, criando um ambiente propício para investimentos verdes.',
+        text: '<b>Meta Ambiciosa</b>\n\nO setor energético de Cabo Verde tem a meta de atingir 100% de energias renováveis até 2050.\n\n\n<b>Progresso Atual</b>\n\nAtualmente, cerca de 20% da energia consumida no país já provém de fontes renováveis.\n\n\n<b>Oportunidades de Investimento</b>\n\nNovas oportunidades surgem para investimentos em energia solar, eólica e projetos de eficiência energética.',
         image: './images/economia-verde.jpg'
       },
       'economia-azul': { 
         title: 'Economia Azul',
-        text: 'Com uma zona económica exclusiva de 700.000 km², Cabo Verde possui um potencial excecional na economia azul. O país oferece oportunidades em pesca sustentável, aquacultura, biotecnologia marinha e turismo costeiro.\n\nO governo cabo-verdiano desenvolveu uma estratégia nacional para a economia azul, focada na conservação marinha e no desenvolvimento económico sustentável. As oportunidades incluem desenvolvimento de portos, logística marítima e investigação oceanográfica.',
+        text: 'A pesca e a transformação de pescado são setores estratégicos, com uma produção anual superior a 25.000 toneladas e um potencial acima dos 34.000 toneladas.\n\nA modernização das infraestruturas pesqueiras e o desenvolvimento de novas cadeias de valor torna este setor atrativo para investidores interessados na exportação, no fornecimento ao setor hoteleiro nacional e na diversificação da indústria de pescado.',
         image: './images/economia-azul.jpg'
       }
     };
@@ -979,6 +979,409 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!this.classList.contains('flipped')) {
                 this.style.transform = 'translateY(0)';
             }
+        });
+    });
+
+    // =======================
+    // ISLAND CAROUSEL FUNCTIONALITY
+    // =======================
+
+    // Add this code at the end of the DOMContentLoaded event listener in script.js
+
+    // Island Carousel Implementation
+    const initIslandCarousel = () => {
+        const carousel = document.querySelector('.island-carousel');
+        if (!carousel) return;
+
+        const track = carousel.querySelector('.carousel-track');
+        const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+        const indicators = Array.from(carousel.querySelectorAll('.carousel-indicator'));
+        const prevButton = carousel.querySelector('.carousel-arrow-left');
+        const nextButton = carousel.querySelector('.carousel-arrow-right');
+
+        let currentIndex = 0;
+        let autoplayInterval;
+        const autoplayDelay = 7000; // 7 seconds
+
+        // Update carousel position and active states
+        const updateCarousel = (index, animate = true) => {
+            // Ensure index is within bounds
+            currentIndex = (index + slides.length) % slides.length;
+
+            // Update track position
+            const offset = -currentIndex * 100;
+            if (animate) {
+                track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            } else {
+                track.style.transition = 'none';
+            }
+            track.style.transform = `translateX(${offset}%)`;
+
+            // Update slides active state
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === currentIndex);
+            });
+
+            // Update indicators
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === currentIndex);
+            });
+        };
+
+        // Go to next slide
+        const nextSlide = () => {
+            updateCarousel(currentIndex + 1);
+        };
+
+        // Go to previous slide
+        const prevSlide = () => {
+            updateCarousel(currentIndex - 1);
+        };
+
+        // Go to specific slide
+        const goToSlide = (index) => {
+            updateCarousel(index);
+        };
+
+        // Start autoplay
+        const startAutoplay = () => {
+            stopAutoplay(); // Clear any existing interval
+            autoplayInterval = setInterval(nextSlide, autoplayDelay);
+        };
+
+        // Stop autoplay
+        const stopAutoplay = () => {
+            if (autoplayInterval) {
+                clearInterval(autoplayInterval);
+                autoplayInterval = null;
+            }
+        };
+
+        // Event listeners for navigation arrows
+        if (prevButton) {
+            prevButton.addEventListener('click', () => {
+                prevSlide();
+                stopAutoplay();
+                startAutoplay(); // Restart autoplay after manual navigation
+            });
+        }
+
+        if (nextButton) {
+            nextButton.addEventListener('click', () => {
+                nextSlide();
+                stopAutoplay();
+                startAutoplay(); // Restart autoplay after manual navigation
+            });
+        }
+
+        // Event listeners for indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                goToSlide(index);
+                stopAutoplay();
+                startAutoplay(); // Restart autoplay after manual navigation
+            });
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            // Check if carousel is in viewport
+            const rect = carousel.getBoundingClientRect();
+            const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+            
+            if (!isInViewport) return;
+
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+                stopAutoplay();
+                startAutoplay();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+                stopAutoplay();
+                startAutoplay();
+            }
+        });
+
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        const handleSwipe = () => {
+            const swipeThreshold = 50; // Minimum distance for a swipe
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swiped left - go to next slide
+                    nextSlide();
+                } else {
+                    // Swiped right - go to previous slide
+                    prevSlide();
+                }
+                stopAutoplay();
+                startAutoplay();
+            }
+        };
+
+        // Pause autoplay when hovering over carousel
+        carousel.addEventListener('mouseenter', stopAutoplay);
+        carousel.addEventListener('mouseleave', startAutoplay);
+
+        // Pause autoplay when page is not visible
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                stopAutoplay();
+            } else {
+                startAutoplay();
+            }
+        });
+
+        // Initialize carousel
+        updateCarousel(0, false);
+        startAutoplay();
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                updateCarousel(currentIndex, false);
+            }, 250);
+        });
+    };
+
+    // Initialize the carousel
+    initIslandCarousel();
+
+    // =======================
+    // STACKING CARDS UTILITY AND INITIALIZATION
+    // =======================
+
+    // Utility function for reduced motion detection
+    if(!window.Util) window.Util = {};
+
+    Util.osHasReducedMotion = function() {
+        if(!window.matchMedia) return false;
+        var matchMediaObj = window.matchMedia('(prefers-reduced-motion: reduce)');
+        if(matchMediaObj) return matchMediaObj.matches;
+        return false; 
+    };
+
+    // Stacking Cards Effect
+    (function() {
+        var StackCards = function(element) {
+            this.element = element;
+            this.items = this.element.getElementsByClassName('js-stack-cards__item');
+            this.scrollingFn = false;
+            this.scrolling = false;
+            initStackCardsEffect(this); 
+            initStackCardsResize(this); 
+        };
+
+        function initStackCardsEffect(element) {
+            setStackCards(element);
+            var observer = new IntersectionObserver(stackCardsCallback.bind(element), { threshold: [0, 1] });
+            observer.observe(element.element);
+        }
+
+        function initStackCardsResize(element) {
+            element.element.addEventListener('resize-stack-cards', function(){
+                setStackCards(element);
+                animateStackCards.bind(element);
+            });
+        }
+        
+        function stackCardsCallback(entries) {
+            if(entries[0].isIntersecting) {
+                if(this.scrollingFn) return;
+                stackCardsInitEvent(this);
+            } else {
+                if(!this.scrollingFn) return;
+                window.removeEventListener('scroll', this.scrollingFn);
+                this.scrollingFn = false;
+            }
+        }
+        
+        function stackCardsInitEvent(element) {
+            element.scrollingFn = stackCardsScrolling.bind(element);
+            window.addEventListener('scroll', element.scrollingFn);
+        }
+
+        function stackCardsScrolling() {
+            if(this.scrolling) return;
+            this.scrolling = true;
+            window.requestAnimationFrame(animateStackCards.bind(this));
+        }
+
+        function setStackCards(element) {
+            element.marginY = getComputedStyle(element.element).getPropertyValue('--stack-cards-gap');
+            getIntegerFromProperty(element);
+            element.elementHeight = element.element.offsetHeight;
+
+            var cardStyle = getComputedStyle(element.items[0]);
+            element.cardTop = Math.floor(parseFloat(cardStyle.getPropertyValue('top')));
+            element.cardHeight = Math.floor(parseFloat(cardStyle.getPropertyValue('height')));
+
+            element.windowHeight = window.innerHeight;
+
+            if(isNaN(element.marginY)) {
+                element.element.style.paddingBottom = '0px';
+            } else {
+                element.element.style.paddingBottom = (element.marginY*(element.items.length - 1))+'px';
+            }
+
+            for(var i = 0; i < element.items.length; i++) {
+                if(isNaN(element.marginY)) {
+                    element.items[i].style.transform = 'none;';
+                } else {
+                    element.items[i].style.transform = 'translateY('+element.marginY*i+'px)';
+                }
+            }
+        }
+
+        function getIntegerFromProperty(element) {
+            var node = document.createElement('div');
+            node.setAttribute('style', 'opacity:0; visibility: hidden; position: absolute; height:'+element.marginY);
+            element.element.appendChild(node);
+            element.marginY = parseInt(getComputedStyle(node).getPropertyValue('height'));
+            element.element.removeChild(node);
+        }
+
+        function animateStackCards() {
+            if(isNaN(this.marginY)) {
+                this.scrolling = false;
+                return; 
+            }
+
+            var top = this.element.getBoundingClientRect().top;
+
+            if(this.cardTop - top + this.element.windowHeight - this.elementHeight - this.cardHeight + this.marginY + this.marginY*this.items.length > 0) { 
+                this.scrolling = false;
+                return;
+            }
+
+            for(var i = 0; i < this.items.length; i++) {
+                var scrolling = this.cardTop - top - i*(this.cardHeight+this.marginY);
+                if(scrolling > 0) {  
+                    var scaling = i == this.items.length - 1 ? 1 : (this.cardHeight - scrolling*0.05)/this.cardHeight;
+                    this.items[i].style.transform = 'translateY('+this.marginY*i+'px) scale('+scaling+')';
+                } else {
+                    this.items[i].style.transform = 'translateY('+this.marginY*i+'px)';
+                }
+            }
+
+            this.scrolling = false;
+        }
+
+        // Initialize StackCards
+        var stackCards = document.getElementsByClassName('js-stack-cards'),
+            intersectionObserverSupported = ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype),
+            reducedMotion = Util.osHasReducedMotion();
+            
+        if(stackCards.length > 0 && intersectionObserverSupported && !reducedMotion) { 
+            var stackCardsArray = [];
+            for(var i = 0; i < stackCards.length; i++) {
+                (function(i){
+                    stackCardsArray.push(new StackCards(stackCards[i]));
+                })(i);
+            }
+            
+            var resizingId = false,
+                customEvent = new CustomEvent('resize-stack-cards');
+            
+            window.addEventListener('resize', function() {
+                clearTimeout(resizingId);
+                resizingId = setTimeout(doneResizing, 500);
+            });
+
+            function doneResizing() {
+                for(var i = 0; i < stackCardsArray.length; i++) {
+                    (function(i){stackCardsArray[i].element.dispatchEvent(customEvent)})(i);
+                }
+            }
+        }
+    })();
+
+    // ================================
+    // SDG SECTION JAVASCRIPT
+    // ================================
+
+    // Intersection Observer for fade-in animations
+    const sdgFaders = document.querySelectorAll('.sdg-fade-in');
+    const sdgAppearOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const sdgAppearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        });
+    }, sdgAppearOptions);
+
+    sdgFaders.forEach(fader => {
+        sdgAppearOnScroll.observe(fader);
+    });
+
+    // Touch device support - toggle flip on tap
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        const sdgCards = document.querySelectorAll('.sdg-card');
+        
+        sdgCards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all other cards
+                sdgCards.forEach(otherCard => {
+                    if (otherCard !== card) {
+                        otherCard.classList.remove('active');
+                    }
+                });
+                
+                // Toggle active class on clicked card
+                this.classList.toggle('active');
+            });
+        });
+        
+        // Close card when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.sdg-card')) {
+                sdgCards.forEach(card => {
+                    card.classList.remove('active');
+                });
+            }
+        });
+    }
+
+    // Keyboard navigation support
+    const sdgCards = document.querySelectorAll('.sdg-card');
+    sdgCards.forEach(card => {
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.classList.toggle('active');
+            }
+        });
+    });
+
+    // Optional: Log when cards are interacted with (for analytics)
+    sdgCards.forEach((card, index) => {
+        card.addEventListener('mouseenter', function() {
+            console.log(`SDG Card ${index + 1} hovered`);
         });
     });
 
