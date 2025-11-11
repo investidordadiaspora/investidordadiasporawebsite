@@ -1689,3 +1689,1130 @@ html.modal-open body::after { opacity: 1; }
     z-index: 2;
 }
 .footer-bottom p { margin-bottom: 0.5rem; opacity: 0.8; }
+
+/* =======================
+   ISLAND CAROUSEL STYLES
+   ======================== */
+
+/* Island Opportunities Section Background */
+.island-opportunities-section {
+    position: relative;
+    background-image: url('./images/oportunidade-ilha.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.island-opportunities-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.island-opportunities-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.island-opportunities-section h2 {
+    color: var(--white-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.island-carousel-wrapper {
+    max-width: 900px;
+    margin: 2rem auto 0 auto;
+    position: relative;
+}
+
+.island-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background: #f5f7fa;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    max-height: 600px;
+}
+
+/* Carousel Navigation Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: var(--dark-blue);
+}
+
+.carousel-arrow:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 86, 179, 0.3);
+}
+
+.carousel-arrow:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-arrow-left {
+    left: 20px;
+}
+
+.carousel-arrow-right {
+    right: 20px;
+}
+
+.carousel-arrow svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Carousel Indicators (Dots) */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.carousel-indicator:hover {
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(1.2);
+}
+
+.carousel-indicator.active {
+    background: white;
+    width: 30px;
+    border-radius: 6px;
+    transform: scale(1);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-arrow-left {
+        left: 10px;
+    }
+    
+    .carousel-arrow-right {
+        right: 10px;
+    }
+    
+    .carousel-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .carousel-indicators {
+        bottom: 15px;
+        gap: 8px;
+        padding: 8px 12px;
+    }
+    
+    .carousel-indicator {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .carousel-indicator.active {
+        width: 24px;
+    }
+    
+    .carousel-slide img {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .island-carousel-wrapper {
+        margin: 1.5rem auto 0 auto;
+    }
+    
+    .carousel-arrow {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .carousel-arrow svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .carousel-slide img {
+        max-height: 300px;
+    }
+    
+    .carousel-indicators {
+        bottom: 10px;
+        gap: 6px;
+        padding: 6px 10px;
+    }
+    
+    .carousel-indicator {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .carousel-indicator.active {
+        width: 20px;
+    }
+}
+
+/* Animation for carousel loading */
+@keyframes carouselFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.island-carousel-wrapper.fade-in.visible {
+    animation: carouselFadeIn 0.8s ease-out;
+}
+
+/* =======================
+   INVESTMENT STEPS STACKING CARDS STYLES
+   ======================== */
+
+/* Stacking Cards Configuration */
+#how-to-invest .stack-cards {
+    --stack-cards-gap: 1.5rem;
+    --stack-cards-item-ratio: 16/9;
+    max-width: 900px;
+    margin: 2rem auto 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+/* Individual Card Styling */
+#how-to-invest .stack-cards__item {
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2rem;
+    height: 0;
+    padding-bottom: calc(100%/(var(--stack-cards-item-ratio)));
+    transform-origin: center top;
+    -webkit-transform-origin: center top;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Card Content Container */
+.invest-card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white-color);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Card Images - Desktop */
+.invest-card-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Cards */
+#how-to-invest .stack-cards__item:hover {
+    box-shadow: 0 15px 40px rgba(0, 86, 179, 0.25);
+}
+
+#how-to-invest .stack-cards__item:hover .invest-card-content img {
+    transform: scale(1.02);
+}
+
+/* Inner Glow Effect */
+#how-to-invest .stack-cards__item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.1);
+    z-index: 1;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    #how-to-invest .stack-cards {
+        --stack-cards-gap: 1rem;
+        margin: 1.5rem auto 0 auto;
+    }
+    
+    #how-to-invest .stack-cards__item {
+        top: 1.5rem;
+    }
+    
+    .invest-card-content {
+        padding: 8px;
+    }
+    
+    /* Ensure images fit on tablets */
+    .invest-card-content img {
+        object-fit: contain;
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    #how-to-invest .stack-cards {
+        --stack-cards-gap: 0.75rem;
+        margin: 1rem auto 0 auto;
+        padding: 0 10px;
+    }
+    
+    #how-to-invest .stack-cards__item {
+        top: 1rem;
+        border-radius: 8px;
+        /* Use auto height on mobile to prevent cropping */
+        height: auto;
+        padding-bottom: 0;
+        min-height: 250px;
+    }
+    
+    .invest-card-content {
+        position: relative;
+        height: auto;
+        min-height: 250px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Mobile images - ensure full visibility */
+    .invest-card-content img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        max-width: 100%;
+        display: block;
+    }
+    
+    /* Remove hover scale on mobile */
+    #how-to-invest .stack-cards__item:hover .invest-card-content img {
+        transform: none;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 375px) {
+    #how-to-invest .stack-cards {
+        padding: 0 5px;
+        --stack-cards-gap: 0.5rem;
+    }
+    
+    #how-to-invest .stack-cards__item {
+        min-height: 200px;
+    }
+    
+    .invest-card-content {
+        min-height: 200px;
+        padding: 10px;
+    }
+}
+
+/* Animation for stacking cards loading */
+@keyframes stackCardsReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#how-to-invest .stack-cards.fade-in.visible {
+    animation: stackCardsReveal 0.8s ease-out;
+}
+
+/* Fallback for browsers without sticky support */
+@supports not (position: sticky) {
+    #how-to-invest .stack-cards__item {
+        position: relative;
+        margin-bottom: 1.5rem;
+        height: auto;
+        padding-bottom: 0;
+        min-height: 300px;
+    }
+    
+    .invest-card-content {
+        position: relative;
+        height: auto;
+        min-height: 300px;
+        padding: 15px;
+    }
+    
+    .invest-card-content img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/* =======================
+   FISCAL BENEFITS SECTION STYLES
+   ======================== */
+
+/* Background Decoration */
+.bg-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bg-decoration__svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    min-width: 1920px;
+    min-height: 1080px;
+}
+
+.bg-decoration__item {
+    opacity: 0.08;
+    transform-origin: center;
+    animation-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Individual item animations with different durations and delays */
+.bg-decoration__item--1 {
+    fill: var(--primary-color);
+    animation: floatShape1 20s ease-in-out infinite;
+}
+
+.bg-decoration__item--2 {
+    fill: var(--dark-blue);
+    animation: floatShape2 18s ease-in-out infinite;
+    animation-delay: -2s;
+}
+
+.bg-decoration__item--3 {
+    fill: var(--primary-color);
+    animation: floatShape3 22s ease-in-out infinite;
+    animation-delay: -5s;
+}
+
+.bg-decoration__item--4 {
+    fill: var(--dark-blue);
+    animation: floatShape4 19s ease-in-out infinite;
+    animation-delay: -8s;
+}
+
+.bg-decoration__item--5 {
+    fill: var(--primary-color);
+    animation: floatShape5 21s ease-in-out infinite;
+    animation-delay: -3s;
+}
+
+.bg-decoration__item--6 {
+    fill: var(--dark-blue);
+    animation: floatShape6 17s ease-in-out infinite;
+    animation-delay: -6s;
+}
+
+.bg-decoration__item--7 {
+    fill: var(--primary-color);
+    animation: floatShape7 23s ease-in-out infinite;
+    animation-delay: -10s;
+}
+
+/* Animation keyframes for different floating patterns */
+@keyframes floatShape1 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    25% {
+        transform: translate(30px, -40px) rotate(5deg) scale(1.1);
+    }
+    50% {
+        transform: translate(-20px, -60px) rotate(-3deg) scale(0.95);
+    }
+    75% {
+        transform: translate(40px, -30px) rotate(8deg) scale(1.05);
+    }
+}
+
+@keyframes floatShape2 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    33% {
+        transform: translate(-40px, 50px) rotate(-8deg) scale(1.08);
+    }
+    66% {
+        transform: translate(25px, 30px) rotate(5deg) scale(0.92);
+    }
+}
+
+@keyframes floatShape3 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    30% {
+        transform: translate(35px, 45px) rotate(10deg) scale(1.12);
+    }
+    60% {
+        transform: translate(-30px, 20px) rotate(-6deg) scale(0.9);
+    }
+}
+
+@keyframes floatShape4 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    40% {
+        transform: translate(-35px, -50px) rotate(-10deg) scale(1.15);
+    }
+    80% {
+        transform: translate(20px, -25px) rotate(7deg) scale(0.88);
+    }
+}
+
+@keyframes floatShape5 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    35% {
+        transform: translate(45px, -35px) rotate(12deg) scale(1.1);
+    }
+    70% {
+        transform: translate(-25px, 40px) rotate(-9deg) scale(0.93);
+    }
+}
+
+@keyframes floatShape6 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    28% {
+        transform: translate(-50px, 30px) rotate(-7deg) scale(1.18);
+    }
+    56% {
+        transform: translate(15px, -40px) rotate(11deg) scale(0.85);
+    }
+    84% {
+        transform: translate(35px, 20px) rotate(-5deg) scale(1.05);
+    }
+}
+
+@keyframes floatShape7 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    20% {
+        transform: translate(40px, 55px) rotate(9deg) scale(1.2);
+    }
+    50% {
+        transform: translate(-45px, -20px) rotate(-12deg) scale(0.87);
+    }
+    80% {
+        transform: translate(25px, 35px) rotate(6deg) scale(1.08);
+    }
+}
+
+/* Ensure section has relative positioning for absolute decoration */
+#fiscal-benefits {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ensure content is above decoration */
+#fiscal-benefits .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .bg-decoration__item {
+        animation: none !important;
+    }
+}
+
+/* Mobile optimization - reduce decoration complexity */
+@media (max-width: 768px) {
+    .bg-decoration__item {
+        opacity: 0.05;
+    }
+    
+    /* Hide some items on mobile for better performance */
+    .bg-decoration__item--5,
+    .bg-decoration__item--6,
+    .bg-decoration__item--7 {
+        display: none;
+    }
+}
+
+
+.fiscal-benefits-header {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+}
+
+.fiscal-benefits-category {
+    margin-bottom: 4rem;
+}
+
+.fiscal-benefits-category:last-child {
+    margin-bottom: 0;
+}
+
+.fiscal-benefits-category h3 {
+    text-align: center;
+    color: var(--dark-blue);
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.fiscal-benefits-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--dark-blue));
+    border-radius: 2px;
+}
+
+.fiscal-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fiscal-benefit-item {
+    background: var(--white-color);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.fiscal-benefit-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--dark-blue));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.fiscal-benefit-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 86, 179, 0.15);
+}
+
+.fiscal-benefit-item:hover::before {
+    transform: scaleX(1);
+}
+
+.fiscal-benefit-icon-wrapper {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.fiscal-benefit-icon-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(0, 86, 179, 0.1), rgba(13, 47, 79, 0.1));
+    z-index: 1;
+    transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.fiscal-benefit-item:hover .fiscal-benefit-icon-wrapper::before {
+    transform: scale(1.15);
+    background: linear-gradient(135deg, rgba(0, 86, 179, 0.2), rgba(13, 47, 79, 0.2));
+}
+
+.fiscal-benefit-icon {
+    width: 32px;
+    height: 32px;
+    z-index: 2;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.fiscal-benefit-item:hover .fiscal-benefit-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.fiscal-benefit-content h4 {
+    color: var(--dark-blue);
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.fiscal-benefit-item:hover .fiscal-benefit-content h4 {
+    color: var(--primary-color);
+}
+
+.fiscal-benefit-content p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 992px) {
+    .fiscal-benefits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .fiscal-benefits-category {
+        margin-bottom: 3rem;
+    }
+    
+    .fiscal-benefits-category h3 {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .fiscal-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .fiscal-benefit-item {
+        padding: 1.5rem;
+    }
+    
+    .fiscal-benefit-icon-wrapper {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 1.25rem;
+    }
+    
+    .fiscal-benefit-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .fiscal-benefit-content h4 {
+        font-size: 1.1rem;
+    }
+    
+    .fiscal-benefit-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .fiscal-benefits-header {
+        margin-bottom: 2rem;
+    }
+    
+    .fiscal-benefits-category h3 {
+        font-size: 1.2rem;
+        padding-bottom: 0.75rem;
+    }
+    
+    .fiscal-benefit-item {
+        padding: 1.25rem;
+    }
+    
+    .fiscal-benefit-icon-wrapper {
+        width: 52px;
+        height: 52px;
+    }
+}
+
+/* ================================
+    SDG SECTION STYLES
+    ================================ */
+
+.sdg-section {
+    padding: 80px 0;
+    background-color: #f7f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+.sdg-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 86, 179, 0.02), rgba(13, 47, 79, 0.02));
+    pointer-events: none;
+}
+
+.sdg-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.sdg-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sdg-header h2 {
+    font-size: 2.5rem;
+    color: #0d2f4f;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.sdg-header p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.sdg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.sdg-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1;
+    background: #fff;
+}
+
+.sdg-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 86, 179, 0.2);
+    z-index: 10;
+}
+
+.sdg-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.sdg-card:hover .sdg-card-inner {
+    transform: rotateY(180deg);
+}
+
+.sdg-card-front,
+.sdg-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.sdg-card-front {
+    background: #fff;
+}
+
+.sdg-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.sdg-card:hover .sdg-card-front img {
+    transform: scale(1.05);
+}
+
+.sdg-card-back {
+    background: linear-gradient(135deg, #0056b3, #0d2f4f);
+    color: #fff;
+    transform: rotateY(180deg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.sdg-card-back h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #fff;
+    line-height: 1.3;
+}
+
+.sdg-card-back p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+}
+
+.sdg-number {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(0, 86, 179, 0.9);
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sdg-footer-note {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(0, 86, 179, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid #0056b3;
+}
+
+.sdg-footer-note p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.sdg-footer-note strong {
+    color: #0d2f4f;
+}
+
+/* Fade-in animation */
+.sdg-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.sdg-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animation for cards */
+.sdg-card.sdg-fade-in {
+    transition-delay: calc(var(--card-index) * 0.05s);
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .sdg-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sdg-section {
+        padding: 60px 0;
+    }
+    
+    .sdg-header h2 {
+        font-size: 2rem;
+    }
+    
+    .sdg-header p {
+        font-size: 1rem;
+    }
+    
+    .sdg-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+    
+    .sdg-card-back {
+        padding: 1rem;
+    }
+    
+    .sdg-card-back h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .sdg-card-back p {
+        font-size: 0.8rem;
+    }
+    
+    .sdg-number {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .sdg-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sdg-footer-note {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+}
+
+/* Touch device optimization */
+@media (hover: none) {
+    .sdg-card.active .sdg-card-inner {
+        transform: rotateY(180deg);
+    }
+    
+    .sdg-card:hover {
+        transform: none;
+    }
+    
+    .sdg-card.active {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 86, 179, 0.2);
+    }
+}
