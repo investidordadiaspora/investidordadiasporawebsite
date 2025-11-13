@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
         image: './images/agronegocio.jpg'
       },
       'industria': { 
-        title: 'Indústria Criativa',
+        title: 'Indústrias Criativas',
         text: '<b>Música e Artes</b>\n\nO setor da cultura e das artes representa um dos pilares da identidade nacional, com potencial de crescimento tanto no mercado interno quanto na exportação de talentos.\n\n\n<b>Reconhecimento Global</b>\n\n\A música cabo-verdiana já é reconhecida globalmente, criando uma base sólida para expansão.\n\n\n<b>Oportunidades de Investimento</b>\n\nHá oportunidades para investimentos em eventos culturais, produção audiovisual e comercialização de produtos artesanais tradicionais.',
         image: './images/industria-criativa.jpg'
       },
@@ -477,7 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sdgData = {
         1: {
             title: "Erradicação da Pobreza",
-            description: "Oportuniza direta e indiretamente o acesso de homens e mulheres a recursos económicos e proteção social.",
+            description: "Oportuniza direta e indiretamente o acesso de homens e mulheres a recursos econômicos e proteção social.",
             hasImage: true
         },
         2: {
@@ -496,7 +496,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hasImage: true
         },
         5: {
-            title: "Igualdade de Género",
+            title: "Igualdade de Gênero",
             description: "Estimula a participação plena e efetiva das mulheres e a igualdade de oportunidades. Fomenta a ocupação de mulheres em cargos de liderança.",
             hasImage: true
         },
@@ -511,7 +511,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hasImage: true
         },
         8: {
-            title: "Trabalho Decente e Crescimento Económico",
+            title: "Trabalho Decente e Crescimento Econômico",
             description: "Geração de emprego digno e rendimento. Incentivo do trabalho decente na cadeia de valor. Estímulo ao empreendedorismo na comunidade.",
             hasImage: true
         },
@@ -522,12 +522,12 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         10: {
             title: "Redução das Desigualdades",
-            description: "Estímulo ao empoderamento e à promoção da inclusão social e económica.",
+            description: "Estímulo ao empoderamento e à promoção da inclusão social e econômica.",
             hasImage: true
         },
         11: {
             title: "Cidades e Comunidades Sustentáveis",
-            description: "Fomento à proteção e salvaguarda do património cultural e natural do mundo.",
+            description: "Fomento à proteção e salvaguarda do patrimônio cultural e natural do mundo.",
             hasImage: true
         },
         12: {
@@ -563,30 +563,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     if (sdgWheel) {
-        // Enhanced goal mapping based on the actual SDG wheel image layout
-        // Based on the visual analysis of the wheel, goals are arranged clockwise from top-right
-        const getGoalFromAngle = (angle) => {
-            // Normalize angle to 0-360 range
-            angle = ((angle % 360) + 360) % 360;
-            
-            // Adjust for starting position - SDG 1 is at the top-right (around 45 degrees)
-            // Rotate by -45 degrees to align with the actual wheel layout
-            angle = (angle - 45 + 360) % 360;
-            
-            // Each goal occupies 360/17 ≈ 21.176 degrees
-            const goalSize = 360 / 17;
-            
-            // Based on the visual wheel layout, clockwise from top-right:
-            // This mapping needs to be calibrated based on the actual wheel image
-            const goalOrder = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
-            
-            // Calculate which segment the angle falls into
-            const segment = Math.floor(angle / goalSize);
-            
-            // Return the corresponding goal (with bounds checking)
-            return goalOrder[segment % 17];
-        };
-        
         // Precise mapping based on actual angle measurements
         const getGoalFromAngleV2 = (angle) => {
             // Normalize angle to 0-360 range
@@ -631,25 +607,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Fallback to goal 5 if no range matches (shouldn't happen with proper ranges)
             return 5;
         };
-        
-        // Test function to verify the mapping works correctly
-        const testMapping = () => {
-            console.log('=== SDG Wheel Mapping Test ===');
-            const testAngles = [275.4, 297.3, 318.6, 340.7, 0, 21.2, 42.4, 63.6, 84.8, 106.4, 127.5, 148.3, 169.8, 192, 211, 233, 256];
-            
-            testAngles.forEach((angle, index) => {
-                const goal = getGoalFromAngleV2(angle);
-                const expectedGoal = index + 1;
-                console.log(`Angle ${angle}°: Expected=${expectedGoal}, Got=${goal} ${goal === expectedGoal ? '✅' : '❌'}`);
-            });
-        };
-        
-        // Run mapping test on load
-        testMapping();
-        
-
-        
-
 
         // Function to hide all hover images and info with better performance
         const hideAllHovers = () => {
@@ -659,7 +616,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     img.classList.remove('visible');
                 });
                 hideSDGInfo();
-                // console.log('Hiding all hover images');
             });
         };
 
@@ -710,9 +666,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Also show info for accessibility
                 showSDGInfo(goalNumber);
-                
-                // Debug logging
-                // console.log(`Showing goal ${goalNumber}: ${data.title}`);
             }
         };
 
@@ -733,9 +686,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 angle += 360;
             }
             
-            // Debug logging (remove in production)
-            // console.log(`Mouse angle: ${angle.toFixed(2)}°, Goal: ${getGoalFromAngle(angle)}`);
-            
             return angle;
         };
 
@@ -751,18 +701,16 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // More precise radius calculations based on the actual wheel design
             const outerRadius = Math.min(rect.width, rect.height) / 2;
-            const innerRadius = outerRadius * 0.15; // Smaller inner radius for better precision
+            const innerRadius = outerRadius * 0.15;
             
             // Add more tolerance for mobile touch interaction
-            const tolerance = outerRadius * 0.1; // Increased tolerance for mobile
+            const tolerance = outerRadius * 0.1;
             
             return distance >= (innerRadius - tolerance) && distance <= (outerRadius + tolerance);
         };
 
         let currentGoal = null;
         let hoverTimeout = null;
-        
-
 
         // Enhanced mouse move handler with improved responsiveness
         const handleMouseMove = (event) => {
@@ -774,7 +722,6 @@ document.addEventListener('DOMContentLoaded', () => {
             hoverTimeout = requestAnimationFrame(() => {
                 if (isInWheel(event)) {
                     const angle = getMouseAngle(event);
-                    // Try the alternative mapping first
                     const goal = getGoalFromAngleV2(angle);
                     
                     if (goal !== currentGoal) {
@@ -782,9 +729,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         showGoal(goal);
                         currentGoal = goal;
                         sdgWheel.style.cursor = 'pointer';
-                        
-                        // Debug: log the angle and goal (can be removed in production)
-                        // console.log(`Angle: ${angle.toFixed(1)}°, Goal: ${goal}`);
                     }
                 } else {
                     if (currentGoal !== null) {
@@ -806,7 +750,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Enhanced feedback for mobile devices
                 if ('vibrate' in navigator) {
-                    navigator.vibrate(50); // Subtle haptic feedback
+                    navigator.vibrate(50);
                 }
                 
                 // Toggle behavior for touch devices
@@ -861,7 +805,6 @@ document.addEventListener('DOMContentLoaded', () => {
         sdgWheel.addEventListener('keydown', (event) => {
             if (event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault();
-                // Cycle through goals with keyboard
                 const nextGoal = currentGoal ? (currentGoal % 17) + 1 : 1;
                 hideAllHovers();
                 showGoal(nextGoal);
@@ -876,8 +819,6 @@ document.addEventListener('DOMContentLoaded', () => {
         sdgWheel.setAttribute('tabindex', '0');
         sdgWheel.setAttribute('role', 'button');
         sdgWheel.setAttribute('aria-label', 'Roda interativa dos Objetivos de Desenvolvimento Sustentável');
-        
-
 
         // Hide info when clicking outside the SDG container
         document.addEventListener('click', function(e) {
@@ -888,8 +829,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, { passive: true });
     }
-
-
 
     // 9. Enhanced Scroll Progress Indicator
     const createScrollProgress = () => {
@@ -958,17 +897,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const flipCards = document.querySelectorAll('.flip-card');
     flipCards.forEach(card => {
         card.addEventListener('click', function() {
-            // Toggle the flipped class
             this.classList.toggle('flipped');
             
-            // Add a subtle animation effect
             this.style.transform = 'scale(0.98)';
             setTimeout(() => {
                 this.style.transform = 'scale(1)';
             }, 150);
         });
         
-        // Add hover effect for better UX
         card.addEventListener('mouseenter', function() {
             if (!this.classList.contains('flipped')) {
                 this.style.transform = 'translateY(-5px)';
@@ -983,186 +919,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // =======================
-    // ISLAND CAROUSEL FUNCTIONALITY
-    // =======================
-
-    // Add this code at the end of the DOMContentLoaded event listener in script.js
-
-    // Island Carousel Implementation
-    const initIslandCarousel = () => {
-        const carousel = document.querySelector('.island-carousel');
-        if (!carousel) return;
-
-        const track = carousel.querySelector('.carousel-track');
-        const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
-        const indicators = Array.from(carousel.querySelectorAll('.carousel-indicator'));
-        const prevButton = carousel.querySelector('.carousel-arrow-left');
-        const nextButton = carousel.querySelector('.carousel-arrow-right');
-
-        let currentIndex = 0;
-        let autoplayInterval;
-        const autoplayDelay = 7000; // 7 seconds
-
-        // Update carousel position and active states
-        const updateCarousel = (index, animate = true) => {
-            // Ensure index is within bounds
-            currentIndex = (index + slides.length) % slides.length;
-
-            // Update track position
-            const offset = -currentIndex * 100;
-            if (animate) {
-                track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-            } else {
-                track.style.transition = 'none';
-            }
-            track.style.transform = `translateX(${offset}%)`;
-
-            // Update slides active state
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === currentIndex);
-            });
-
-            // Update indicators
-            indicators.forEach((indicator, i) => {
-                indicator.classList.toggle('active', i === currentIndex);
-            });
-        };
-
-        // Go to next slide
-        const nextSlide = () => {
-            updateCarousel(currentIndex + 1);
-        };
-
-        // Go to previous slide
-        const prevSlide = () => {
-            updateCarousel(currentIndex - 1);
-        };
-
-        // Go to specific slide
-        const goToSlide = (index) => {
-            updateCarousel(index);
-        };
-
-        // Start autoplay
-        const startAutoplay = () => {
-            stopAutoplay(); // Clear any existing interval
-            autoplayInterval = setInterval(nextSlide, autoplayDelay);
-        };
-
-        // Stop autoplay
-        const stopAutoplay = () => {
-            if (autoplayInterval) {
-                clearInterval(autoplayInterval);
-                autoplayInterval = null;
-            }
-        };
-
-        // Event listeners for navigation arrows
-        if (prevButton) {
-            prevButton.addEventListener('click', () => {
-                prevSlide();
-                stopAutoplay();
-                startAutoplay(); // Restart autoplay after manual navigation
-            });
-        }
-
-        if (nextButton) {
-            nextButton.addEventListener('click', () => {
-                nextSlide();
-                stopAutoplay();
-                startAutoplay(); // Restart autoplay after manual navigation
-            });
-        }
-
-        // Event listeners for indicators
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                goToSlide(index);
-                stopAutoplay();
-                startAutoplay(); // Restart autoplay after manual navigation
-            });
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            // Check if carousel is in viewport
-            const rect = carousel.getBoundingClientRect();
-            const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
-            
-            if (!isInViewport) return;
-
-            if (e.key === 'ArrowLeft') {
-                prevSlide();
-                stopAutoplay();
-                startAutoplay();
-            } else if (e.key === 'ArrowRight') {
-                nextSlide();
-                stopAutoplay();
-                startAutoplay();
-            }
-        });
-
-        // Touch/swipe support for mobile
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        carousel.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-
-        carousel.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        }, { passive: true });
-
-        const handleSwipe = () => {
-            const swipeThreshold = 50; // Minimum distance for a swipe
-            const diff = touchStartX - touchEndX;
-
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    // Swiped left - go to next slide
-                    nextSlide();
-                } else {
-                    // Swiped right - go to previous slide
-                    prevSlide();
-                }
-                stopAutoplay();
-                startAutoplay();
-            }
-        };
-
-        // Pause autoplay when hovering over carousel
-        carousel.addEventListener('mouseenter', stopAutoplay);
-        carousel.addEventListener('mouseleave', startAutoplay);
-
-        // Pause autoplay when page is not visible
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                stopAutoplay();
-            } else {
-                startAutoplay();
-            }
-        });
-
-        // Initialize carousel
-        updateCarousel(0, false);
-        startAutoplay();
-
-        // Handle window resize
-        let resizeTimeout;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-                updateCarousel(currentIndex, false);
-            }, 250);
-        });
-    };
-
-    // Initialize the carousel
-    initIslandCarousel();
-
-    // =======================
     // STACKING CARDS UTILITY AND INITIALIZATION
     // =======================
 
@@ -1175,6 +931,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if(matchMediaObj) return matchMediaObj.matches;
         return false; 
     };
+
+    // Add Util addClass and removeClass if not already defined
+    if(!Util.addClass) {
+        Util.addClass = function(el, className) {
+            var classList = className.split(' ');
+            el.classList.add(classList[0]);
+            if (classList.length > 1) Util.addClass(el, classList.slice(1).join(' '));
+        };
+    }
+
+    if(!Util.removeClass) {
+        Util.removeClass = function(el, className) {
+            var classList = className.split(' ');
+            el.classList.remove(classList[0]);
+            if (classList.length > 1) Util.removeClass(el, classList.slice(1).join(' '));
+        };
+    }
 
     // Stacking Cards Effect
     (function() {
@@ -1315,7 +1088,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // SDG SECTION JAVASCRIPT
     // ================================
 
-    // Intersection Observer for fade-in animations
     const sdgFaders = document.querySelectorAll('.sdg-fade-in');
     const sdgAppearOptions = {
         threshold: 0.15,
@@ -1342,19 +1114,16 @@ document.addEventListener('DOMContentLoaded', () => {
             card.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // Remove active class from all other cards
                 sdgCards.forEach(otherCard => {
                     if (otherCard !== card) {
                         otherCard.classList.remove('active');
                     }
                 });
                 
-                // Toggle active class on clicked card
                 this.classList.toggle('active');
             });
         });
         
-        // Close card when clicking outside
         document.addEventListener('click', function(e) {
             if (!e.target.closest('.sdg-card')) {
                 sdgCards.forEach(card => {
@@ -1378,11 +1147,137 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Optional: Log when cards are interacted with (for analytics)
-    sdgCards.forEach((card, index) => {
-        card.addEventListener('mouseenter', function() {
-            console.log(`SDG Card ${index + 1} hovered`);
+    // =======================
+    // IMAGE INTEREST POINTS FUNCTIONALITY
+    // =======================
+
+    // Image Interest Points Implementation
+    var IntPoints = function(element) {
+        this.element = element;
+        this.markers = this.element.getElementsByClassName('js-int-points__marker');
+        this.content = this.element.getElementsByClassName('int-points__content');
+        this.selectedMarker = false;
+        initIntPoints(this);
+    };
+
+    function initIntPoints(element) {
+        // set marker position
+        setMarkerPosition(element);
+        // listen for the click on a marker
+        element.element.addEventListener('click', function(event){
+            var marker = event.target.closest('.js-int-points__marker');
+            if(marker) toggleContent(element, marker);
         });
-    });
+    }
+
+    function setMarkerPosition(element) {
+        // set top and left position for the single markers
+        for(var i = 0; i < element.markers.length; i++) {
+            var coordinates = element.markers[i].getAttribute('data-coordinates');
+            if(!coordinates) continue;
+            coordinates = coordinates.split(',');
+            element.markers[i].style.left = coordinates[0].trim();
+            element.markers[i].style.top = coordinates[1].trim();
+        }
+    }
+
+    function toggleContent(element, marker) {
+        // close content if it's open
+        if(element.selectedMarker == marker) {
+            closeContent(element);
+            return;
+        }
+        // if another marker was selected -> close its content
+        if(element.selectedMarker) closeContent(element);
+        // open new content
+        openContent(element, marker);
+    }
+
+    function openContent(element, marker) {
+        // open content box associated to marker
+        element.selectedMarker = marker;
+        var contentId = marker.getAttribute('data-content-id');
+        for(var i = 0; i < element.content.length; i++) {
+            if(element.content[i].getAttribute('id') == contentId) {
+                Util.addClass(marker, 'int-points__marker--active');
+                Util.addClass(element.content[i], 'int-points__content--is-visible');
+                placeContent(element, marker, element.content[i]);
+                break;
+            }
+        }
+    }
+
+    function closeContent(element) {
+        // close content box
+        Util.removeClass(element.selectedMarker, 'int-points__marker--active');
+        var contentId = element.selectedMarker.getAttribute('data-content-id'),
+            content = document.getElementById(contentId);
+        Util.removeClass(content, 'int-points__content--is-visible');
+        element.selectedMarker = false;
+    }
+
+    function placeContent(element, marker, content) {
+        // set top and left position of the content box
+        var selectedMarkerPosition = marker.getBoundingClientRect(),
+            contentHeight = content.offsetHeight,
+            contentWidth = content.offsetWidth;
+        
+        var left = selectedMarkerPosition.left + 0.5*selectedMarkerPosition.width - 0.5*contentWidth,
+            top = selectedMarkerPosition.top + selectedMarkerPosition.height + 10;
+
+        // check content position is within the viewport
+        var containerPosition = element.element.getBoundingClientRect();
+        if(left + contentWidth > containerPosition.left + containerPosition.width) {
+            left = containerPosition.left + containerPosition.width - contentWidth;
+        }
+        if(left < containerPosition.left) left = containerPosition.left;
+
+        if(top + contentHeight > containerPosition.top + containerPosition.height) {
+            top = selectedMarkerPosition.top - contentHeight - 10;
+        }
+        if(top < containerPosition.top) top = containerPosition.top;
+        
+        content.style.left = (left - containerPosition.left)+'px';
+        content.style.top = (top - containerPosition.top)+'px';
+    }
+
+    // Initialize the IntPoints objects
+    var intPoints = document.getElementsByClassName('js-int-points');
+    if(intPoints.length > 0) {
+        for(var i = 0; i < intPoints.length; i++) {
+            (function(i){new IntPoints(intPoints[i]);})(i);
+        }
+    }
+
+    var intPointsContainers = document.getElementsByClassName('js-int-points');
+    if(intPointsContainers.length > 0) {
+        for(var i = 0; i < intPointsContainers.length; i++) {
+            (function(container) {
+                var image = container.querySelector('img');
+                
+                if(image) {
+                    image.addEventListener('click', function(event) {
+                        // Check if click was on image, not on a marker
+                        var clickedMarker = event.target.closest('.js-int-points__marker');
+                        
+                        if(!clickedMarker) {
+                            // Close any open content
+                            var activeMarker = container.querySelector('.int-points__marker--active');
+                            
+                            if(activeMarker) {
+                                var contentId = activeMarker.getAttribute('data-content-id');
+                                var content = document.getElementById(contentId);
+                                
+                                if(content) {
+                                    Util.removeClass(activeMarker, 'int-points__marker--active');
+                                    Util.removeClass(content, 'int-points__content--is-visible');
+                                }
+                            }
+                        }
+                    });
+                }
+            })(intPointsContainers[i]);
+        }
+    }
 
 });
