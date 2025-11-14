@@ -2864,15 +2864,10 @@ html.modal-open body::after { opacity: 1; }
   align-items: center;
   width: var(--int-points-marker-size);
   height: var(--int-points-marker-size);
-  border-radius: 50%;
   background-color: hsl(var(--color-bg-light-hsl));
-  box-shadow: 0 0 0 2px hsla(var(--color-contrast-higher-hsl), 0.15);
   transition: 0.2s;
   cursor: pointer;
-}
-
-.int-points__btn:hover {
-  box-shadow: 0 0 0 4px hsla(var(--color-contrast-higher-hsl), 0.15);
+  border-color: #fff0;
 }
 
 .int-points__btn .icon {
@@ -2935,20 +2930,11 @@ html.modal-open body::after { opacity: 1; }
 /* Fallback styles if CSS variables not defined */
 .int-points__marker {
   --int-points-marker-size: 2.5em;
-  --int-points-marker-icon-size: 1em;
-}
-
-.int-points__btn {
-  background-color: white;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
-}
-
-.int-points__btn:hover {
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.15);
+  --int-points-marker-icon-size: 2em;
 }
 
 .int-points__btn .icon {
-  color: #0056b3;
+  color: #00C7B1;
 }
 
 .int-points__content {
@@ -3011,8 +2997,6 @@ html.modal-open body::after { opacity: 1; }
 
 /* Alternative fallback styles if CSS variables don't work */
 .int-points__btn {
-  background-color: white;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
   position: relative;
 }
 
@@ -3287,4 +3271,60 @@ html.modal-open body::after { opacity: 1; }
         background-color: rgba(255, 255, 255, 0.1);
         border-color: rgba(255, 255, 255, 0.4);
     }
+}
+
+.id-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-image {
+    height: 60px;
+    width: auto;
+}
+
+.logo-row {
+  --base-height: 9rem;
+  --scale-factor-horizontal: 0.1;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem 2rem;
+  padding: 1.5rem 0rem;
+  background: #ffffff;
+}
+
+.logo {
+  --base-ratio: calc(var(--width) / var(--height));
+  aspect-ratio: var(--base-ratio);
+  
+  --factor-horizontal: min(
+	  var(--scale-factor-horizontal) * -1 * var(--base-ratio) + var(--scale-factor-horizontal) + 1,
+	  1
+  );
+  height: max(
+    var(--base-height) / 2,
+    var(--base-height) * var(--factor-horizontal)
+  );
+
+  align-content: center;
+  
+  & img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* --- Additional CSS Stuff --- */
+
+.wrapper {
+  width: min(100% - 1rem, 80rem);
+  margin-inline: auto;
+  
+  > * + * {
+    margin-block-start: 4rem;
+  }
 }
