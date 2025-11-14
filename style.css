@@ -3044,7 +3044,7 @@ html.modal-open body::after { opacity: 1; }
 
 @media (max-width: 576px) {
   .int-points__content {
-    width: 180px;
+    width: 200px;
   }
 }
 
