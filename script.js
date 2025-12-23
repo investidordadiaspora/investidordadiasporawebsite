@@ -163,9 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const langInput = document.getElementById('langInput');
         const formMessage = document.getElementById('formMessage');
         const fileMap = { 
-            'pt': './guides/guia_investidor_pt.pdf', 
-            'en': './guides/investor_guide_en.pdf', 
-            'fr': './guides/guide_investisseur_fr.pdf' 
+            'pt': './guides/Guia-do-Investidor-da-Diaspora-PT-Versao-Web.pdf', 
+            'en': './guides/Guide-of-Diaspora-Investor-EN-Web-Version.pdf', 
+            'fr': './guides/Guide-de-L-Investisseur-de-la-Diaspora-FR-Version-Web.pdf' 
         };
 
         downloadButtons.forEach(button => {

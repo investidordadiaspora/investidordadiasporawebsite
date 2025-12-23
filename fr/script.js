@@ -163,9 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const langInput = document.getElementById('langInput');
         const formMessage = document.getElementById('formMessage');
         const fileMap = { 
-            'pt': './guides/guia_investidor_pt.pdf', 
-            'en': './guides/investor_guide_en.pdf', 
-            'fr': './guides/guide_investisseur_fr.pdf' 
+            'pt': './guides/Guia-do-Investidor-da-Diaspora-PT-Versao-Web.pdf', 
+            'en': './guides/Guide-of-Diaspora-Investor-EN-Web-Version.pdf', 
+            'fr': './guides/Guide-de-L-Investisseur-de-la-Diaspora-FR-Version-Web.pdf' 
         };
 
         downloadButtons.forEach(button => {
@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       'industria': { 
         title: 'Industries Créatives',
-        text: '<b>Musique et Arts</b>\n\nLe secteur de la culture et des arts représente l\'un des piliers de l\'identité nationale, avec un potentiel de croissance tant sur le marché intérieur que dans l\'exportation de talents.\n\n\n<b>Reconnaissance Globale</b>\n\nLa musique cap-verdienne est déjà reconnue mondialement, créant une base solide pour l\'expansion.\n\n\n<b>Opportunités d\'Investissement</b>\n\nIl y a des opportunités pour des investissements dans des événements culturels, production audiovisuelle et commercialisation de produits artisanaux traditionnels.',
+        text: '<b>Musique et Arts</b>\n\nLe secteur de la culture et des arts représente l\'un des piliers de l\'identité nationale, avec un potentiel de croissance tant sur le marché intérieur que dans l\'exportation de talents.\n\n\n<b>Reconnaissance Globale</b>\n\nLa musique CABO-VERDIENNE est déjà reconnue mondialement, créant une base solide pour l\'expansion.\n\n\n<b>Opportunités d\'Investissement</b>\n\nIl y a des opportunités pour des investissements dans des événements culturels, production audiovisuelle et commercialisation de produits artisanaux traditionnels.',
         image: './images/industria-criativa.jpg'
       },
       'economia-digital': { 

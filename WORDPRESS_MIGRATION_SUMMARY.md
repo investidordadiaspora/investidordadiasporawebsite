@@ -196,7 +196,7 @@ Your website migration is complete! You now have:
 **Theme Version**: 1.0  
 **Status**: Ready for Deployment ✅
 
-Your Cape Verde Diaspora Investor Guide website is now ready to go live on WordPress!
+Your Cabo Verde Diaspora Investor Guide website is now ready to go live on WordPress!
 
 
 
