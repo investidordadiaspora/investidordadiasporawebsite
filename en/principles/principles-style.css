@@ -1,0 +1,584 @@
+/* ================================
+   PRINCÍPIOS PAGES STYLES
+   ================================ */
+
+/* Hero Section */
+.principio-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-blue));
+    color: var(--white-color);
+    padding: 120px 0 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.principio-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.08)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.06)"/></svg>');
+    animation: float 20s ease-in-out infinite;
+}
+
+.principio-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.breadcrumb a {
+    color: var(--white-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.principio-hero h1 {
+    font-size: 2.5rem;
+    color: var(--white-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    max-width: 800px;
+}
+
+/* Content Wrapper */
+.principio-content {
+    background-color: var(--white-color);
+}
+
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.content-section {
+    margin-bottom: 4rem;
+}
+
+.content-section h2 {
+    color: var(--dark-blue);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.content-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--dark-blue));
+    border-radius: 2px;
+}
+
+.content-section p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Highlight Box */
+.highlight-box {
+    background: linear-gradient(135deg, rgba(0, 86, 179, 0.05), rgba(13, 47, 79, 0.05));
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.highlight-box .icon {
+    width: 48px;
+    height: 48px;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.highlight-box h3 {
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.highlight-box p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Principles Grid */
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.principle-card {
+    background: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.principle-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--dark-blue));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.principle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 86, 179, 0.15);
+}
+
+.principle-card:hover::before {
+    transform: scaleX(1);
+}
+
+.principle-number {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-blue));
+    color: var(--white-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.principle-card h3 {
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.principle-card > p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.principle-list {
+    list-style: none;
+    padding: 0;
+}
+
+.principle-list li {
+    color: #555;
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+.principle-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Action Areas */
+.action-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.action-card {
+    background: var(--white-color);
+    border: 2px solid rgba(0, 86, 179, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.action-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 86, 179, 0.1);
+}
+
+.action-card h3 {
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.action-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Implementation Steps */
+.implementation-steps {
+    margin-top: 2rem;
+}
+
+.step {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-blue));
+    color: var(--white-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.step-content p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.benefit-item {
+    background: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 86, 179, 0.1);
+    border-color: var(--primary-color);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-item h4 {
+    color: var(--dark-blue);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.benefit-item p {
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Resources Box */
+.resources-box {
+    background: linear-gradient(135deg, rgba(0, 86, 179, 0.05), rgba(13, 47, 79, 0.05));
+    border: 1px solid rgba(0, 86, 179, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.resources-box h3 {
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.resources-list {
+    list-style: none;
+    padding: 0;
+}
+
+.resources-list li {
+    color: #555;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    line-height: 1.6;
+}
+
+.resources-list li:last-child {
+    border-bottom: none;
+}
+
+.resources-list strong {
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+/* CTA Box */
+.cta-box {
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-blue));
+    color: var(--white-color);
+    border-radius: 16px;
+    padding: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.cta-box h2 {
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+.cta-box h2::after {
+    display: none;
+}
+
+.cta-box p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    min-width: 200px;
+}
+
+.cta-buttons .btn-outline {
+    border-color: var(--white-color);
+    color: var(--white-color);
+}
+
+.cta-buttons .btn-outline:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+/* Principles Navigation */
+.principles-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-prev,
+.nav-next {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-decoration: none;
+    padding: 1.5rem;
+    border: 2px solid rgba(0, 86, 179, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 45%;
+}
+
+.nav-prev {
+    align-items: flex-start;
+}
+
+.nav-next {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.nav-prev:hover,
+.nav-next:hover {
+    border-color: var(--primary-color);
+    background: rgba(0, 86, 179, 0.05);
+    transform: translateY(-3px);
+}
+
+.nav-label {
+    font-size: 0.85rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-title {
+    font-size: 1.1rem;
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .principio-hero {
+        padding: 100px 0 60px 0;
+    }
+
+    .principio-hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .content-wrapper {
+        padding: 40px 20px;
+    }
+
+    .content-section {
+        margin-bottom: 3rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .highlight-box {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .action-areas {
+        grid-template-columns: 1fr;
+    }
+
+    .step {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+
+    .principles-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-prev,
+    .nav-next {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .principio-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .principle-card {
+        padding: 1.5rem;
+    }
+
+    .implementation-steps {
+        margin-top: 1.5rem;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .resources-box {
+        padding: 1.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .site-header,
+    .site-footer,
+    .principles-nav,
+    .cta-box {
+        display: none;
+    }
+
+    .principio-hero {
+        background: none;
+        color: #000;
+    }
+
+    .content-wrapper {
+        max-width: 100%;
+    }
+}
