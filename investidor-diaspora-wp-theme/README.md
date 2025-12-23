@@ -1,6 +1,6 @@
 # Investidor da Diáspora - WordPress Theme
 
-A custom WordPress theme for the Cape Verde Diaspora Investor Guide website.
+A custom WordPress theme for the Cabo Verde Diaspora Investor Guide website.
 
 ## 🎯 Features
 
@@ -46,7 +46,7 @@ investidor-diaspora-wp-theme/
 ## 📝 Custom Post Types
 
 ### Opportunities
-- **Purpose**: Showcase business opportunities in Cape Verde
+- **Purpose**: Showcase business opportunities in Cabo Verde
 - **Fields**: Title, Content, Featured Image, Excerpt
 - **Template**: `single-opportunity.php`
 
@@ -207,7 +207,7 @@ For support and questions:
 
 ## 📄 License
 
-This theme is developed for the Cape Verde Diaspora Investor Guide project. All rights reserved.
+This theme is developed for the Cabo Verde Diaspora Investor Guide project. All rights reserved.
 
 ## 🔄 Updates
 

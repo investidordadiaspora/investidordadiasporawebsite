@@ -163,9 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const langInput = document.getElementById('langInput');
         const formMessage = document.getElementById('formMessage');
         const fileMap = { 
-            'pt': './guides/guia_investidor_pt.pdf', 
-            'en': './guides/investor_guide_en.pdf', 
-            'fr': './guides/guide_investisseur_fr.pdf' 
+            'pt': './guides/Guia-do-Investidor-da-Diaspora-PT-Versao-Web.pdf', 
+            'en': './guides/Guide-of-Diaspora-Investor-EN-Web-Version.pdf', 
+            'fr': './guides/Guide-de-L-Investisseur-de-la-Diaspora-FR-Version-Web.pdf' 
         };
 
         downloadButtons.forEach(button => {
@@ -256,17 +256,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const OPPS = {
       'agronegocio': { 
         title: 'Agribusiness',
-        text: '<b>Agricultural Potential</b>\n\nCape Verde has a stable climate and mild temperatures throughout the year, allowing predictable agricultural production with lower climatic risk. The islands of Santiago, S. Antão, Fogo, Brava, and S. Nicolau have the greatest agricultural potential.\n\n\n<b>Market Opportunities</b>\n\nCurrently, about 70% of the food consumed in the country is imported, making local products highly competitive and reducing external dependence. The European organic food market is valued at over 50 billion euros, presenting an opportunity for exporting sustainable agricultural products.',
+        text: '<b>Agricultural Potential</b>\n\nCabo Verde has a stable climate and mild temperatures throughout the year, allowing predictable agricultural production with lower climatic risk. The islands of Santiago, S. Antão, Fogo, Brava, and S. Nicolau have the greatest agricultural potential.\n\n\n<b>Market Opportunities</b>\n\nCurrently, about 70% of the food consumed in the country is imported, making local products highly competitive and reducing external dependence. The European organic food market is valued at over 50 billion euros, presenting an opportunity for exporting sustainable agricultural products.',
         image: './images/agronegocio.jpg'
       },
       'industria': { 
         title: 'Creative Industries',
-        text: '<b>Music and Arts</b>\n\nThe culture and arts sector is one of the pillars of national identity, with growth potential in both the domestic market and the export of talent.\n\n\n<b>Global Recognition</b>\n\nCape Verdean music is already recognized worldwide, creating a solid foundation for expansion.\n\n\n<b>Investment Opportunities</b>\n\nThere are opportunities for investment in cultural events, audiovisual production, and commercialization of traditional handicraft products.',
+        text: '<b>Music and Arts</b>\n\nThe culture and arts sector is one of the pillars of national identity, with growth potential in both the domestic market and the export of talent.\n\n\n<b>Global Recognition</b>\n\nCabo Verdean music is already recognized worldwide, creating a solid foundation for expansion.\n\n\n<b>Investment Opportunities</b>\n\nThere are opportunities for investment in cultural events, audiovisual production, and commercialization of traditional handicraft products.',
         image: './images/industria-criativa.jpg'
       },
       'economia-digital': { 
         title: 'Digital Economy',
-        text: '<b>Infrastructure</b>\n\nBroadband internet access covers more than 90% of the national territory.\n\n\n<b>Tech Park</b>\n\nDriven by the Tech Park and government initiatives.\n\n\n<b>Tech Hub</b>\n\nThe government aims to make Cape Verde a technology hub in West Africa.\n\n\n<b>Startups</b>\n\nFavorable environment for digital-based startups and technological innovation.',
+        text: '<b>Infrastructure</b>\n\nBroadband internet access covers more than 90% of the national territory.\n\n\n<b>Tech Park</b>\n\nDriven by the Tech Park and government initiatives.\n\n\n<b>Tech Hub</b>\n\nThe government aims to make Cabo Verde a technology hub in West Africa.\n\n\n<b>Startups</b>\n\nFavorable environment for digital-based startups and technological innovation.',
         image: './images/economia-digital.jpg'
       },
       'turismo': { 
@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       'economia-verde': { 
         title: 'Green Economy',
-        text: '<b>Ambitious Goal</b>\n\nCape Verde\'s energy sector has the goal of reaching 100% renewable energy by 2050.\n\n\n<b>Current Progress</b>\n\nCurrently, about 20% of the energy consumed in the country comes from renewable sources.\n\n\n<b>Investment Opportunities</b>\n\nNew opportunities arise for investments in solar, wind, and energy efficiency projects.',
+        text: '<b>Ambitious Goal</b>\n\nCabo Verde\'s energy sector has the goal of reaching 100% renewable energy by 2050.\n\n\n<b>Current Progress</b>\n\nCurrently, about 20% of the energy consumed in the country comes from renewable sources.\n\n\n<b>Investment Opportunities</b>\n\nNew opportunities arise for investments in solar, wind, and energy efficiency projects.',
         image: './images/economia-verde.jpg'
       },
       'economia-azul': { 
