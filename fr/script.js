@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const OPPS = {
       'agronegocio': { 
         title: 'Agro-industrie',
-        text: '<b>Potentiel Agricole</b>\n\nLe Cap-Vert possède un climat stable et des températures douces tout au long de l\'année, permettant des productions agricoles prévisibles et avec un risque climatique moindre. Les îles de Santiago, S. Antão, Fogo, Brava et S. Nicolau sont les îles avec le plus grand potentiel agricole.\n\n\n<b>Opportunités de Marché</b>\n\nActuellement, environ 70% des aliments consommés dans le pays sont importés, ce qui rend les produits locaux hautement compétitifs et réduit la dépendance extérieure. Le marché européen des aliments biologiques est évalué à plus de 50 milliards d\'euros, présentant une opportunité pour l\'exportation de produits agricoles durables.',
+        text: '<b>Potentiel Agricole</b>\n\nLe Cabo Verde possède un climat stable et des températures douces tout au long de l\'année, permettant des productions agricoles prévisibles et avec un risque climatique moindre. Les îles de Santiago, S. Antão, Fogo, Brava et S. Nicolau sont les îles avec le plus grand potentiel agricole.\n\n\n<b>Opportunités de Marché</b>\n\nActuellement, environ 70% des aliments consommés dans le pays sont importés, ce qui rend les produits locaux hautement compétitifs et réduit la dépendance extérieure. Le marché européen des aliments biologiques est évalué à plus de 50 milliards d\'euros, présentant une opportunité pour l\'exportation de produits agricoles durables.',
         image: './images/agronegocio.jpg'
       },
       'industria': { 
@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       'economia-digital': { 
         title: 'Économie Numérique',
-        text: '<b>Infrastructure</b>\n\nL\'accès à internet haut débit couvre plus de 90% du territoire national.\n\n\n<b>Tech Park</b>\n\nPropulsé par le Tech Park et des initiatives gouvernementales.\n\n\n<b>Hub Technologique</b>\n\nObjectif du Gouvernement de transformer le Cap-Vert en un hub technologique en Afrique de l\'Ouest.\n\n\n<b>Startups</b>\n\nEnvironnement favorable pour des startups basées sur le numérique et l\'innovation technologique.',
+        text: '<b>Infrastructure</b>\n\nL\'accès à internet haut débit couvre plus de 90% du territoire national.\n\n\n<b>Tech Park</b>\n\nPropulsé par le Tech Park et des initiatives gouvernementales.\n\n\n<b>Hub Technologique</b>\n\nObjectif du Gouvernement de transformer le Cabo Verde en un hub technologique en Afrique de l\'Ouest.\n\n\n<b>Startups</b>\n\nEnvironnement favorable pour des startups basées sur le numérique et l\'innovation technologique.',
         image: './images/economia-digital.jpg'
       },
       'turismo': { 
@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       'economia-verde': { 
         title: 'Économie Verte',
-        text: '<b>Objectif Ambitieux</b>\n\nLe secteur énergétique du Cap-Vert a pour objectif d\'atteindre 100% d\'énergies renouvelables d\'ici 2050.\n\n\n<b>Progrès Actuel</b>\n\nActuellement, environ 20% de l\'énergie consommée dans le pays provient de sources renouvelables.\n\n\n<b>Opportunités d\'Investissement</b>\n\nDe nouvelles opportunités émergent pour des investissements en énergie solaire, éolienne et projets d\'efficacité énergétique.',
+        text: '<b>Objectif Ambitieux</b>\n\nLe secteur énergétique du Cabo Verde a pour objectif d\'atteindre 100% d\'énergies renouvelables d\'ici 2050.\n\n\n<b>Progrès Actuel</b>\n\nActuellement, environ 20% de l\'énergie consommée dans le pays provient de sources renouvelables.\n\n\n<b>Opportunités d\'Investissement</b>\n\nDe nouvelles opportunités émergent pour des investissements en énergie solaire, éolienne et projets d\'efficacité énergétique.',
         image: './images/economia-verde.jpg'
       },
       'economia-azul': { 
